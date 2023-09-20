@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom: 1px solid #323232 ;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+.active{
+  display: block;
+}
+
+
+
+.input-filed{
+  height: 0;
+  width: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.file-label{
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 7px 15px;
   display: flex;
-  flex-direction: column;
+  width: 50px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+transition: .4s;
+}
+.file-label:hover{
+  background-color: #ccc;
+
 }
 
-.App-link {
-  color: #61dafb;
+.image-preview{
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-box{
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+
+.input-image{
+  display: flex;
+  align-items: center;
+}
+
+
+/* select checkbox */
+
+
+.items{
+  display: flex;
+  align-items: center;
+}
+
+.item input{
+  height: 0;
+  width: 0;
+}
+
+.item label{
+  padding: 2px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item label.selected{
+  background: #ccc;
+}
+
+
+.icon{
+  visibility: hidden;
+}
+
