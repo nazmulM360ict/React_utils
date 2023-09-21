@@ -136,3 +136,10 @@ transition: .4s;
   font-size: 40px;
   color: #ccc;
 }
+
+
+/* disable image */
+
+.image-overlay {
+  pointer-events: none; /* Allows events to pass through to the image */
+}
